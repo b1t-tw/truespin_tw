@@ -1,26 +1,5 @@
-#icon
-    position: absolute
-    top: 2rem
-    left: 2rem
-    width: 8rem
-    z-index: 1
-    filter: drop-shadow(2px 2px 4px black)
-.carousel
-    .carousel-inner, .carousel-item
-        height: 100%
-    img
-        object-fit: cover
-        object-position: center center
 #banner
     background-color: black
-#carouselExpBg
-    padding-top: 40%
-    padding-bottom: 40%
-    .carousel-indicators
-        bottom: 20%
-    .carousel-inner
-        height: 25vw
-        border: 5px double white
 #works
     position: relative
     &::after
@@ -34,10 +13,13 @@
         pointer-events: none
     .fire, .light, .workshop
         position: relative
-        min-height: 80vh
+        height: 80vh
         display: flex
         justify-content: center
         align-items: center
+        overflow: hidden
+        color: white
+        text-decoration: none
         h1
             background-color: rgba(0, 0, 0, .3)
             width: 100%
@@ -59,14 +41,39 @@
             transition: .3s
         &:hover::before
             filter: brightness(1) saturate(1)
+            transform: scale(1.02)
     .fire::before
         background-image: url("/assets/img/works/fire.jpg")
     .light::before
         background-image: url("/assets/img/works/light.jpg")
     .workshop::before
         background-image: url("/assets/img/works/workshop.jpg")
+#carouselExpBg
+    padding-top: 40%
+    padding-bottom: 40%
+    .carousel-indicators
+        bottom: 20%
+    .carousel-inner
+        height: 25vw
+        border: 4px solid white
 #experience
     ul
         list-style: square
         li
             margin-bottom: .5rem
+            &::marker
+                color: orange
+
+@media(max-width: 767.9px)
+    #works
+        .fire, .light, .workshop
+            height: 40vh
+            &::before
+                filter: saturate(1)
+    #carouselExpBg
+        padding-top: 0
+        padding-bottom: 20%
+        .carousel-indicators
+            bottom: 10%
+        .carousel-inner
+            height: 55vw

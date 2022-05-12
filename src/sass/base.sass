@@ -1,26 +1,51 @@
 html, body
   margin: 0
   padding: 0
+  height: 100%
 body
   font-family: 'Noto Sans TC', sans-serif
   background-color: black
   color: white
 
+#bg-filter
+  position: absolute
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+  pointer-events: none
+  &::before
+    content: ""
+    position: fixed
+    z-index: -1
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    filter: brightness(0.1)
+    //background-image: url("/assets/img/bgfire.jpg")
+    background-attachment: fixed
+    background-size: cover
+    background-position: center
+
 h1, h2, h3, h4, h5, h6
+  pointer-events: none
   font-family: 'Noto Serif TC', serif
   text-decoration: none
   font-weight: bolder
 
-  
 h1.title
   filter: drop-shadow(2px 4px 6px orange)
+
+p
+  text-align: justify
 
 \::-webkit-scrollbar
   width: 6px
   height: 6px
 
 \::-webkit-scrollbar-track
-  background: #DDD
+  background: #222
 
 \::-webkit-scrollbar-thumb
   background: #444
@@ -28,6 +53,99 @@ h1.title
   &:hover
     background: #555
 
+#icon
+  position: absolute
+  top: 1rem
+  left: 1rem
+  width: 8rem
+  z-index: 1056
+  filter: drop-shadow(2px 2px 4px black)
 
-#footer 
-  background-color: #111
+#offcanvasRight
+  background-color: rgba(#000, .75)
+  .link-list
+    a
+      color: white
+      text-decoration: none
+      margin-bottom: 1.5rem
+      display: block
+      filter: opacity(.75)
+      &:hover
+        filter: opacity(1)
+
+.burger
+  z-index: 1056
+  display: block
+  height: 2.5rem
+  width: 3rem
+  padding: 0
+  position: fixed
+  right: 1rem
+  top: 1rem
+  filter: opacity(.75)
+  &:hover
+    filter: opacity(1)
+  span
+    position: absolute
+    top: calc(50% - 1.5px)
+    left: calc(50% - 1rem)
+    display: block
+    width: 2rem
+    height: 3px
+    background-color: #DDD
+    border-radius: 0px
+    transition: .3s
+    &::before
+      content: ""
+      position: absolute
+      margin-top: -8px
+      display: block
+      width: 2rem
+      height: 3px
+      background-color: #DDD
+      border-radius: 0px
+      transition: .3s
+    &::after
+      content: ""
+      position: absolute
+      margin-top: 8px
+      display: block
+      width: 2rem
+      height: 3px
+      background-color: #DDD
+      border-radius: 0px
+      transition: .3s
+  &.clicked
+    span
+      background-color: transparent
+      &::before
+        transform: translate(0px, 8px) rotate(45deg) scale(.75)
+      &::after
+        transform: translate(0px, -8px) rotate(-45deg) scale(.75)
+.carousel
+  .carousel-inner, .carousel-item
+    height: 100%
+    img
+      object-fit: cover
+      object-position: center center
+.vw-auto
+  width: 80vw
+  margin: 2rem auto
+.yt-box
+  height: 45vw
+  border: 2px solid white
+.footer
+  background-color: rgba(#333, .3)
+  > div
+    width: fit-content
+    margin: auto
+  a
+    filter: opacity(.75)
+    &:hover
+      filter: opacity(1)
+
+@media(min-width: 768px)
+  .vw-auto
+    width: 64vw
+  .yt-box
+    height: 36vw
