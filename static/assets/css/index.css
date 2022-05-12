@@ -1,0 +1,93 @@
+#icon {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  width: 8rem;
+  z-index: 1;
+  filter: drop-shadow(2px 2px 4px black);
+}
+
+.carousel .carousel-inner, .carousel .carousel-item {
+  height: 100%;
+}
+.carousel img {
+  object-fit: cover;
+  object-position: center center;
+}
+
+#banner {
+  background-color: black;
+}
+
+#carouselExpBg {
+  padding-top: 40%;
+  padding-bottom: 40%;
+}
+#carouselExpBg .carousel-indicators {
+  bottom: 20%;
+}
+#carouselExpBg .carousel-inner {
+  height: 25vw;
+  border: 5px double white;
+}
+
+#works {
+  position: relative;
+}
+#works::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 70%, black 100%);
+  pointer-events: none;
+}
+#works .fire, #works .light, #works .workshop {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#works .fire h1, #works .light h1, #works .workshop h1 {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  margin: 0;
+  filter: drop-shadow(2px 2px 2px black);
+}
+#works .fire::before, #works .light::before, #works .workshop::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(1) saturate(0);
+  transition: 0.3s;
+}
+#works .fire:hover::before, #works .light:hover::before, #works .workshop:hover::before {
+  filter: brightness(1) saturate(1);
+}
+#works .fire::before {
+  background-image: url("/assets/img/works/fire.jpg");
+}
+#works .light::before {
+  background-image: url("/assets/img/works/light.jpg");
+}
+#works .workshop::before {
+  background-image: url("/assets/img/works/workshop.jpg");
+}
+
+#experience ul {
+  list-style: square;
+}
+#experience ul li {
+  margin-bottom: 0.5rem;
+}

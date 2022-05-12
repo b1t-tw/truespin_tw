@@ -1,0 +1,102 @@
+extends _layout.pug
+block variables
+  - title = "點亮黑暗的表演者"
+block head
+  link(rel="stylesheet" href="/assets/css/index.css?version="+timestamp)
+block body
+  #banner.container-fluid.g-0.vh-100
+    #carouselBanner.h-50.carousel.slide.carousel-fade(data-bs-ride='carousel' data-bs-keyboard='false' data-bs-touch='false' data-bs-pause='false')
+      .carousel-inner
+        .carousel-item.active
+          img.d-block.w-100.h-100(src='/assets/img/banner/banner1.jpg' alt='...')
+        .carousel-item
+          img.d-block.w-100.h-100(src='/assets/img/banner/banner2.jpg' alt='...')
+        .carousel-item
+          img.d-block.w-100.h-100(src='/assets/img/banner/banner3.jpg' alt='...')
+      #icon
+        img.w-100(src="/assets/img/font_icon.svg", alt="", srcset="")
+    #slogan.container.text-center.h-50.d-flex.flex-column.justify-content-center.align-items-center
+      h1.title.mb-4 點亮黑暗的表演者
+      p.px-4 旋舞炎於2004年成立，根基於台灣罕見的火舞專項，由熱愛火舞及光影藝術的舞者群，表演元素以東方文化為根本，結合現代舞、武術動作、傳統技藝，並融合了歐美的 Flow art 以及聲光互動科技，將光軌飛舞於夜空中呈現各種耀眼光紋，震撼迷人的光影藝術。
+  #works.container-fluid.g-0: .row.g-0
+    .col-4.fire
+      h1 火舞
+    .col-4.light
+      h1 電幻
+    .col-4.workshop
+      h1 教學
+  #experience.container.py-4
+    h1.title.text-center.my-5 海內外演出經歷
+    .row.py-4
+      .col-md-6
+        #carouselExpBg.sticky-top.carousel.slide(data-bs-ride='carousel' data-bs-interval='3000')
+          .carousel-indicators
+            button.active(type='button' data-bs-target='#carouselExpBg' data-bs-slide-to='0')
+            button(type='button' data-bs-target='#carouselExpBg' data-bs-slide-to='1')
+            button(type='button' data-bs-target='#carouselExpBg' data-bs-slide-to='2')
+            button(type='button' data-bs-target='#carouselExpBg' data-bs-slide-to='3')
+            button(type='button' data-bs-target='#carouselExpBg' data-bs-slide-to='4')
+            button(type='button' data-bs-target='#carouselExpBg' data-bs-slide-to='5')
+            button(type='button' data-bs-target='#carouselExpBg' data-bs-slide-to='6')
+          .carousel-inner
+            .carousel-item.active
+              img.d-block.w-100.h-100(src='/assets/img/experience/exp01.jpg' alt='...')
+            .carousel-item
+              img.d-block.w-100.h-100(src='/assets/img/experience/exp02.jpg' alt='...')
+            .carousel-item
+              img.d-block.w-100.h-100(src='/assets/img/experience/exp03.jpg' alt='...')
+            .carousel-item
+              img.d-block.w-100.h-100(src='/assets/img/experience/exp04.jpg' alt='...')
+            .carousel-item
+              img.d-block.w-100.h-100(src='/assets/img/experience/exp05.jpg' alt='...')
+            .carousel-item
+              img.d-block.w-100.h-100(src='/assets/img/experience/exp06.jpg' alt='...')
+            .carousel-item
+              img.d-block.w-100.h-100(src='/assets/img/experience/exp07.jpg' alt='...')
+      .col-md-6: ul.ps-5
+        li 十面埋伏 火舞聲樂大型公演 / 億載金城、兩廳院
+        li 雲門劇場開幕特約演出嘉賓 / 淡水
+        li 國際蘭雨節 / 宜蘭
+        li 台灣燈節 / 台北
+        li 新港夏日Fun音樂 / 嘉義
+        li 國家戲劇院耶誕點燈 / 台北
+        li S.H.E. MV 拍攝
+        li 張棟樑 MV 拍攝
+        li Volvo XC40 廣告
+        li Nikon 單眼相機 廣告
+        li BanQ 平面電視 廣告
+        li SONY Xperia Z5 廣告
+        li 白蘭氏精采生活 電視廣告
+        li 關鍵時刻 火安專業講習
+        li 2100全民開講 防火安全宣導
+        li 三立【綜藝大熱門】
+        li 中天【小燕之夜】
+        li 中天【康熙來了】
+        li 中視【超級模王大道】
+        li 中視【綜藝大哥大】
+        li 台視【鑽石夜總會】
+        li 中視【我猜我猜我猜猜猜】
+        li 衛視中文台【麻辣天后宮】
+        li 我要上春晚 / 北京
+        li 科技藝術節 / 印度
+        li 百威年度大會 / 越南
+        li 金沙城開幕典禮 / 澳門
+        li 北京現代國際車展 成都 / 杭州
+        li 非常泰時尚餐廳開幕 / 北京
+        li OGNI 火舞節 / 俄羅斯
+        li Lanjong 藝術節 / 印尼
+        li 港鐵創意設計大賽 / 香港
+        li MC Ocean 經銷會 / 馬來西亞
+        li OPPO R15 全球發表會 / 深圳
+        li Superb SKODA 發表會
+        li SK-II 品牌發表
+        li BMW 新車發表會
+        li 哈利波特5 首映會
+        li 赤壁2 首映會
+        li 刺陵 首映會
+        li ...
+
+  #customer.container.py-4
+    h1.title.text-center.my-5 合作客戶
+    img.w-100(src="/assets/img/customer.jpg", alt="", srcset="")
+
