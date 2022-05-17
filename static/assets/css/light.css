@@ -1,3 +1,7 @@
+#bg-filter::before {
+  background-image: url("/assets/img/bglight.jpg");
+}
+
 #carouselBanner {
   height: 100vh;
 }
