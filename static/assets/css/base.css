@@ -159,8 +159,11 @@ p {
 }
 
 .yt-box {
-  height: 45vw;
-  border: 2px solid white;
+  height: 36vw;
+}
+
+.yt-box-md {
+  height: 36vw;
 }
 
 .footer {
@@ -182,7 +185,7 @@ p {
     width: 64vw;
   }
 
-  .yt-box {
-    height: 36vw;
+  .yt-box-md {
+    height: 16vw;
   }
 }
