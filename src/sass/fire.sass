@@ -1,5 +1,14 @@
-#banner
-    height: 30vh
-    background-image: url("/assets/img/works/fire.jpg")
-    background-position: center
-    background-size: cover
+#bg-filter
+    &::before
+        background-image: url("/assets/img/bgfire.jpg")
+.owl-carousel
+    .item img
+        height: 30vh
+.owl-theme .owl-dots .owl-dot.active span
+    background: orange !important
+.owl-theme .owl-dots .owl-dot:hover span
+    background: orange !important
+    opacity: .8
+@media(max-width: 767.9px)
+    .owl-carousel .item img
+        height: 16vh
