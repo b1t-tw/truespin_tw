@@ -72,7 +72,6 @@ p
       filter: opacity(.75)
       &:hover
         filter: opacity(1)
-
 .burger
   z-index: 1056
   display: block
@@ -82,9 +81,10 @@ p
   position: fixed
   right: 1rem
   top: 1rem
-  filter: opacity(.75)
   &:hover
-    filter: opacity(1)
+    span
+      filter: opacity(1)
+      transform: scaleY(1.2)
   span
     position: absolute
     top: calc(50% - 1.5px)
@@ -95,6 +95,7 @@ p
     background-color: #DDD
     border-radius: 0px
     transition: .3s
+    filter: opacity(.75)
     &::before
       content: ""
       position: absolute
@@ -118,6 +119,7 @@ p
   &.clicked
     span
       background-color: transparent
+      transform: none
       &::before
         transform: translate(0px, 8px) rotate(45deg) scale(.75)
       &::after
@@ -133,8 +135,8 @@ p
   margin: 2rem auto
 .yt-box
   height: 36vw
-.yt-box-md
-  height: 36vw
+.yt-box.col-md-6
+  height: 16vw
 .footer
   background-color: rgba(#333, .3)
   > div
@@ -148,5 +150,10 @@ p
 @media(min-width: 768px)
   .vw-auto
     width: 64vw
-  .yt-box-md
-    height: 16vw
+
+@media(max-width: 767.9px)
+  .offcanvas-end
+    width: 100%
+    border-left: 0
+  .yt-box.col-md-6
+    height: 36vw
