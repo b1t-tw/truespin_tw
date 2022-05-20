@@ -1,0 +1,68 @@
+extends ../_layout.pug
+block variables
+  - title = "課程"
+block head
+  link(rel="stylesheet" href="/assets/css/workshop.css?version="+timestamp)
+  link(rel="stylesheet" href="/assets/package/owlcarousel/owl.carousel.min.css")
+  link(rel="stylesheet" href="/assets/package/owlcarousel/owl.theme.default.min.css")
+block body
+  .container.py-4.mt-5
+    .vw-auto
+      h1.title 工作坊
+      h5.my-3 企業尾牙、春酒
+      .container-fluid.g-0: .owl-carousel.owl-theme
+        .item: img(src="/assets/img/works/workshop/workshop1_01.jpg" alt="")
+        .item: img(src="/assets/img/works/workshop/workshop1_02.jpg" alt="")
+        .item: img(src="/assets/img/works/workshop/workshop1_03.jpg" alt="")
+        .item: img(src="/assets/img/works/workshop/workshop1_04.jpg" alt="")
+        .item: img(src="/assets/img/works/workshop/workshop1_05.jpg" alt="")      
+      .yt-box.mt-3: iframe.w-100.h-100(src='https://www.youtube.com/embed/jw4dlmia2T0?rel=0&modestbranding=1&playsinline=1&enablejsapi=1' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)
+  
+  .container.py-4
+    .vw-auto
+      h1.title.mb-3 火安培訓班
+      .container-fluid.g-0: .owl-carousel.owl-theme
+        .item: img(src="/assets/img/works/workshop/workshop2_01.jpg" alt="")
+        .item: img(src="/assets/img/works/workshop/workshop2_02.jpg" alt="")
+        .item: img(src="/assets/img/works/workshop/workshop2_03.jpg" alt="")
+        .item: img(src="/assets/img/works/workshop/workshop2_04.jpg" alt="")
+        .item: img(src="/assets/img/works/workshop/workshop2_05.jpg" alt="")      
+      .yt-box.mt-3: iframe.w-100.h-100(src='https://www.youtube.com/embed/fOVBEIpVk6A?rel=0&modestbranding=1&playsinline=1&enablejsapi=1' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)
+  
+  .container.py-4
+    .vw-auto
+      h1.title 常態專攻班
+      h5.my-3 棍術、球技、武幻、龍棍、呼拉圈
+      .container-fluid.g-0: .owl-carousel.owl-theme
+        .item: img(src="/assets/img/works/workshop/workshop3_01.jpg" alt="")
+        .item: img(src="/assets/img/works/workshop/workshop3_02.jpg" alt="")
+        .item: img(src="/assets/img/works/workshop/workshop3_03.jpg" alt="")
+        .item: img(src="/assets/img/works/workshop/workshop3_04.jpg" alt="")
+        .item: img(src="/assets/img/works/workshop/workshop3_05.jpg" alt="")      
+      .row.mt-3.g-0(style="background-color: #008b8b55;")
+        .col-md-5.d-flex.align-items-center.justify-content-center
+          h4.my-3 青年專攻班
+        .yt-box.col-md-7.p-2: iframe.w-100.h-100(src='https://www.youtube.com/embed/WLyb458YU20?rel=0&modestbranding=1&playsinline=1&enablejsapi=1' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)
+      .row.mt-3.g-0(style="background-color: #e9967a55;")
+        .col-md-5.d-flex.align-items-center.justify-content-center.order-md-1
+          h4.my-3 幼童全腦開發
+        .yt-box.col-md-7.p-2: iframe.w-100.h-100(src='https://www.youtube.com/embed/24VusLZlqp8?rel=0&modestbranding=1&playsinline=1&enablejsapi=1' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)
+      .row.mt-3.g-0(style="background-color: #483d8b55;")
+        .col-md-5.d-flex.align-items-center.justify-content-center
+          h4.my-3 長青柔軟伸展班
+        .yt-box.col-md-7.p-2: iframe.w-100.h-100(src='https://www.youtube.com/embed/3r1o8EOBtSY?rel=0&modestbranding=1&playsinline=1&enablejsapi=1' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)
+
+block script
+  script(src="/assets/package/owlcarousel/owl.carousel.min.js")
+  script.
+    $(document).ready(function(){
+      $(".owl-carousel").owlCarousel({
+          loop: true,
+          dots: true,
+          autoWidth:true,
+          center: true,
+          autoplay: true,
+          margin: 10,
+          autoplayTimeout: 5000,
+      });
+    });

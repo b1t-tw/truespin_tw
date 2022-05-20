@@ -7,6 +7,20 @@ body
   background-color: black
   color: white
 
+#loading
+  height: 100%
+  width: 100%
+  top: 0
+  left: 0
+  position: fixed
+  z-index: 99999999
+  background-color: black
+  img
+    height: 5rem
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
 #bg-filter
   position: absolute
   top: 0
@@ -139,6 +153,7 @@ p
   height: 36vw
 .yt-box.col-md-6
   height: 16vw
+
 .footer
   background-color: rgba(#333, .3)
   > div
@@ -157,5 +172,7 @@ p
   .offcanvas-end
     width: 100%
     border-left: 0
+  .yt-box
+    height: 40vw
   .yt-box.col-md-6
     height: 36vw

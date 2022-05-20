@@ -16,6 +16,8 @@ head
     link(rel="stylesheet" href="/assets/css/base.css?version="+timestamp)
     block head
     body
+        #loading
+            img(src="/assets/loading.svg", alt="")
         #bg-filter  
         a(href="/"): #icon: img.w-100(src="/assets/img/font_icon.svg", alt="", srcset="")
         a.burger(href='#' data-bs-toggle='offcanvas' data-bs-target='#offcanvasRight' aria-controls='offcanvasRight'): span
@@ -51,5 +53,10 @@ head
                 $("#offcanvasRight").on("hide.bs.offcanvas", function() {
                     $(".burger").removeClass("clicked")
                 })
+            });
+            $("body").css({"overflow": "hidden"})
+            $( window ).on("load", function(){
+                $("#loading").fadeOut();
+                $("body").css({"overflow": "auto"})
             });
         block script

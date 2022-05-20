@@ -1,0 +1,30 @@
+#bg-filter::before {
+  background-image: url("/assets/img/bgworkshop2.jpg");
+}
+
+.owl-carousel .item img {
+  height: 40vh;
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+  background: orange !important;
+}
+
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: orange !important;
+  opacity: 0.8;
+}
+
+.yt-box.col-md-7 {
+  height: 20vw;
+}
+
+@media (max-width: 767.9px) {
+  .owl-carousel .item img {
+    height: 20vh;
+  }
+
+  .yt-box.col-md-7 {
+    height: 45vw;
+  }
+}
