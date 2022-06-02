@@ -43,7 +43,7 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  filter: brightness(0.1);
+  filter: brightness(0.15);
   background-image: url("/assets/img/bg.jpg");
   background-attachment: fixed;
   background-size: cover;
@@ -191,7 +191,7 @@ p {
 .footer {
   background-color: rgba(51, 51, 51, 0.3);
 }
-.footer > div {
+.footer > .center {
   width: fit-content;
   margin: auto;
 }
@@ -200,6 +200,10 @@ p {
 }
 .footer a:hover {
   filter: opacity(1);
+}
+.footer .footer-icon {
+  height: 2rem;
+  margin-right: 0.5rem;
 }
 
 @media (min-width: 768px) {
