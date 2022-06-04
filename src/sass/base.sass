@@ -67,7 +67,7 @@ h1, h2, h3, h4, h5, h6
 h1.title
   filter: drop-shadow(2px 4px 6px orange)
 
-p
+p, h5
   text-align: justify
 
 \::-webkit-scrollbar
@@ -163,7 +163,7 @@ p
       object-fit: cover
       object-position: center center
 .vw-auto
-  width: 80vw
+  width: 64vw
   margin: 2rem auto
 .yt-box
   height: 36vw
@@ -183,11 +183,9 @@ p
     height: 2rem
     margin-right: .5rem
 
-@media(min-width: 768px)
-  .vw-auto
-    width: 64vw
-
 @media(max-width: 767.9px)
+  .vw-auto
+    width: calc(100% - 2rem)
   .offcanvas-end
     width: 100%
     border-left: 0
