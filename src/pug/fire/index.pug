@@ -3,8 +3,6 @@ block variables
   - title = "火舞"
 block head
   link(rel="stylesheet" href="/assets/css/fire.css?version="+timestamp)
-  link(rel="stylesheet" href="/assets/package/owlcarousel/owl.carousel.min.css")
-  link(rel="stylesheet" href="/assets/package/owlcarousel/owl.theme.default.min.css")
 block body
   img.w-100(src="/assets/img/works/fire/banner.jpg" alt="")
   .container-fluid.g-0: .owl-carousel.owl-theme
@@ -23,13 +21,12 @@ block body
       .yt-box.col-12: iframe.w-100.h-100(src='https://www.youtube.com/embed/2JUG29Rr7Lw?rel=0&modestbranding=1&playsinline=1&enablejsapi=1' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)
       .yt-box.col-12: iframe.w-100.h-100(src='https://www.youtube.com/embed/4gNyEstYGmU?rel=0&modestbranding=1&playsinline=1&enablejsapi=1' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)
 block script
-  script(src="/assets/package/owlcarousel/owl.carousel.min.js")
   script.
     $( window ).on("load", function(){
       $(".owl-carousel").owlCarousel({
           loop: true,
           dots: true,
-          autoWidth:true,
+          autoWidth: true,
           center: true,
           autoplay: true,
           autoplayTimeout: 5000,

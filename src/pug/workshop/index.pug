@@ -3,8 +3,6 @@ block variables
   - title = "課程"
 block head
   link(rel="stylesheet" href="/assets/css/workshop.css?version="+timestamp)
-  link(rel="stylesheet" href="/assets/package/owlcarousel/owl.carousel.min.css")
-  link(rel="stylesheet" href="/assets/package/owlcarousel/owl.theme.default.min.css")
 block body
   .container.py-4.mt-5
     .vw-auto
@@ -53,7 +51,6 @@ block body
         .yt-box.col-md-7.p-2: iframe.w-100.h-100(src='https://www.youtube.com/embed/3r1o8EOBtSY?rel=0&modestbranding=1&playsinline=1&enablejsapi=1' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)
 
 block script
-  script(src="/assets/package/owlcarousel/owl.carousel.min.js")
   script.
     $( window ).on("load", function(){
       $(".owl-carousel").owlCarousel({

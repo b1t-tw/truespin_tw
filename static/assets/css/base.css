@@ -5,9 +5,36 @@ html, body {
 }
 
 body {
-  font-family: "Noto Sans TC", sans-serif;
+  font-family: creamfont, hanamin, sans-serif;
+  font-weight: lighter;
   background-color: black;
   color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  pointer-events: none;
+  font-family: creamfont, hanamin, sans-serif;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.owl-carousel .owl-item img {
+  width: auto;
+}
+
+.jf-loading body {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.jf-active body {
+  opacity: 1;
+  visibility: visible;
+}
+
+.jf-inactive body {
+  opacity: 1;
+  visibility: visible;
 }
 
 #loading {
@@ -48,13 +75,6 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  pointer-events: none;
-  font-family: "Noto Serif TC", serif;
-  text-decoration: none;
-  font-weight: bolder;
 }
 
 h1.title {
