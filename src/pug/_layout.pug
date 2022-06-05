@@ -20,6 +20,7 @@ html(lang="zh-Hant-TW")
         link(rel="stylesheet" href="/assets/css/base.css?version="+timestamp)
         block head
     body
+        #fr-filter
         //#loading
             img(src="/assets/loading.svg", alt="")
         #bg-filter  
@@ -55,14 +56,19 @@ html(lang="zh-Hant-TW")
         script(src="/assets/package/owlcarousel/owl.carousel.min.js")
         script.
             $(function() {
-                AOS.init()
+                //AOS.init()
                 $("#offcanvasRight").on("show.bs.offcanvas", function() {
                     $(".burger").addClass("clicked")
                 })
                 $("#offcanvasRight").on("hide.bs.offcanvas", function() {
                     $(".burger").removeClass("clicked")
                 })
-            });
+            })
+            $(window).on('mousemove', function (e) {
+                let mx = e.clientX
+                let my = e.clientY
+                $("#fr-filter").css({"left": mx, "top": my})
+            })
             /*
             $("body").css({"overflow": "hidden"})
             $( window ).on("load", function(){
