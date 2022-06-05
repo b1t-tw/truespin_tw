@@ -13,6 +13,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   pointer-events: none;
+  user-select: none;
   font-family: creamfont, hanamin, sans-serif;
   text-decoration: none;
   font-weight: bolder;
@@ -52,6 +53,18 @@ h1, h2, h3, h4, h5, h6 {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+#fr-filter {
+  height: 3vw;
+  width: 3vw;
+  transform: translate(-40%, -40%);
+  border-radius: 1.5vw;
+  -webkit-backdrop-filter: invert(100);
+  backdrop-filter: invert(100);
+  pointer-events: none;
+  position: fixed;
+  z-index: 99999999;
 }
 
 #bg-filter {
@@ -227,6 +240,10 @@ p, h5 {
 }
 
 @media (max-width: 767.9px) {
+  #fr-filter {
+    display: none;
+  }
+
   .vw-auto {
     width: calc(100% - 2rem);
   }
