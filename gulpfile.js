@@ -28,7 +28,7 @@ function buildPug() {
     }))
     .pipe(pug())
     .pipe(gulp.dest('./static/'))
-    .pipe(sitemap({ siteUrl: 'http://example.com' }))
+    .pipe(sitemap({ siteUrl: 'http://tsfiregroup.tw/' }))
     .pipe(gulp.dest('./static/'))
     .pipe(connect.reload());
 }

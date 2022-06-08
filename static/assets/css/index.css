@@ -1,3 +1,16 @@
+#fr-filter {
+  display: block;
+  height: 3vw;
+  width: 3vw;
+  transform: translate(-40%, -40%);
+  border-radius: 1.5vw;
+  -webkit-backdrop-filter: invert(100);
+  backdrop-filter: invert(100);
+  pointer-events: none;
+  position: fixed;
+  z-index: 99999999;
+}
+
 #banner {
   background: linear-gradient(180deg, black 50%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0) 80%, black 100%);
 }
@@ -86,6 +99,10 @@
 }
 
 @media (max-width: 767.9px) {
+  #fr-filter {
+    display: none;
+  }
+
   #works .fire, #works .light, #works .workshop {
     height: 40vh;
   }

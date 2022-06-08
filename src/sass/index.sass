@@ -1,3 +1,15 @@
+
+#fr-filter
+  display: block
+  height: 3vw
+  width: 3vw
+  transform: translate(-40%, -40%)
+  border-radius: 1.5vw
+  -webkit-backdrop-filter: invert(100)
+  backdrop-filter: invert(100)
+  pointer-events: none
+  position: fixed
+  z-index: 99999999
 #banner
     background: linear-gradient(180deg, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 70%, rgba(0,0,0,0) 80%, rgba(0,0,0,1) 100%)
 #works
@@ -66,6 +78,8 @@
                 color: orange
 
 @media(max-width: 767.9px)
+    #fr-filter
+        display: none
     #works
         .fire, .light, .workshop
             height: 40vh

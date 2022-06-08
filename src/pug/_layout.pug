@@ -36,7 +36,8 @@ html(lang="zh-Hant-TW")
                     a(href="/light"): h4 電幻
                     a(href="/workshop"): h4 課程
                 .footer.container-fluid.mt-4.py-5: .center
-                    p Phone：+886 921-133-355 | 連長 Lien
+                    p 專案經理 | 連長 Lien
+                    p Phone：+886 921-133-355
                     p Email：firelien@hotmail.com
                     p Line：firelien
                     p
@@ -44,7 +45,8 @@ html(lang="zh-Hant-TW")
                         a(href='https://www.instagram.com/tsfiregroup/' target='_blank'): img.footer-icon(src='/assets/img/instagram-square-brands.svg')
         block body
         .footer.container-fluid.mt-5.py-5: .center
-            p Phone：+886 921-133-355 | 連長 Lien
+            p 專案經理 | 連長 Lien
+            p Phone：+886 921-133-355
             p Email：firelien@hotmail.com
             p Line：firelien
             p
@@ -64,7 +66,7 @@ html(lang="zh-Hant-TW")
                     $(".burger").removeClass("clicked")
                 })
             })
-            $(window).on('mousemove', function (e) {
+            $(document).on('mousemove', function (e) {
                 let mx = e.clientX
                 let my = e.clientY
                 $("#fr-filter").css({"left": mx, "top": my})
