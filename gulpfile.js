@@ -28,7 +28,10 @@ function buildPug() {
     }))
     .pipe(pug())
     .pipe(gulp.dest('./static/'))
-    .pipe(sitemap({ siteUrl: 'http://tsfiregroup.tw/' }))
+    .pipe(sitemap({ 
+      siteUrl: 'https://tsfiregroup.tw/',
+      images: true
+    }))
     .pipe(gulp.dest('./static/'))
     .pipe(connect.reload());
 }
