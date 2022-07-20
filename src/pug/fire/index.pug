@@ -16,10 +16,10 @@ block body
       h1.title 火舞
       h5 商業、藝文演出  廣告、電影、音樂拍攝
     .vw-auto: .row.g-4.text-center
-      .yt-box.col-12: iframe.w-100.h-100(src='https://www.youtube.com/embed/XrrbLLN8h8A?rel=0&modestbranding=1&playsinline=1&enablejsapi=1' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)
-      .yt-box.col-12: iframe.w-100.h-100(src='https://www.youtube.com/embed/SVRIPJn0-Ms?rel=0&modestbranding=1&playsinline=1&enablejsapi=1' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)
-      .yt-box.col-12: iframe.w-100.h-100(src='https://www.youtube.com/embed/2JUG29Rr7Lw?rel=0&modestbranding=1&playsinline=1&enablejsapi=1' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)
-      .yt-box.col-12: iframe.w-100.h-100(src='https://www.youtube.com/embed/4gNyEstYGmU?rel=0&modestbranding=1&playsinline=1&enablejsapi=1' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)
+      .col-xl-6: .youtube-player.ratio.ratio-16x9(data-id="XrrbLLN8h8A")
+      .col-xl-6: .youtube-player.ratio.ratio-16x9(data-id="SVRIPJn0-Ms")
+      .col-xl-6: .youtube-player.ratio.ratio-16x9(data-id="2JUG29Rr7Lw")
+      .col-xl-6: .youtube-player.ratio.ratio-16x9(data-id="4gNyEstYGmU")
 block script
   script.
     $( window ).on("load", function(){
