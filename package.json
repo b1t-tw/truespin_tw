@@ -6,6 +6,7 @@
   "author": "SeanGau",
   "license": "MIT",
   "scripts": {
+    "build": "gulp build",
     "start": "gulp server"
   },
   "dependencies": {

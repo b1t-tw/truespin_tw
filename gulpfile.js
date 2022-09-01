@@ -28,13 +28,18 @@ function buildPug() {
     }))
     .pipe(pug())
     .pipe(gulp.dest('./static/'))
-    .pipe(sitemap({ 
+    .pipe(sitemap({
       siteUrl: 'https://tsfiregroup.tw/',
       images: true
     }))
     .pipe(gulp.dest('./static/'))
     .pipe(connect.reload());
 }
+
+gulp.task('build', async() => {
+  await buildSass();
+  await buildPug();
+});
 
 gulp.task('server', function () {
   connect.server({
